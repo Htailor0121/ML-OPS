@@ -68,7 +68,7 @@ async def update_state_food(state: str, food_update: FoodUpdate):
 @app.delete("/delete_state_food/{state}")
 async def deleted_state_food(state: str):
     if state in indian_state_foods:
-        del indian_state_foods[state]
+        del indian_state_foods[state]   
         return {"message":f"Food data for {state} has been deleted succesfully"}
     else:
         return {"error":f"State not found"}
