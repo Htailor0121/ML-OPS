@@ -70,6 +70,6 @@ async def deleted_state_food(state: str):
     if state in indian_state_foods:
         del indian_state_foods[state]   
         return {"message":f"Food data for {state} has been deleted succesfully"}
-    else:
+    else:   
         return {"error":f"State not found"}
     
