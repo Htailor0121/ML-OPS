@@ -51,7 +51,7 @@ async def add_state_food(state: str, food_update: FoodUpdate):
     # Check if the state exists
     if state not in indian_state_foods:
         return {"error": "State not found"}
-    
+     
     indian_state_foods[state].extend(food_update.new_foods)
     
     return {"message": f"New food items added for {state}!", "updated_foods": indian_state_foods[state]}
